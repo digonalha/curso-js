@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Operadores Lógicos</title>
+    </head>
+    <body>
+        <script>
+            function servicoMilitar(sexo, idade){
+                if (sexo == 'M' && idade >= 18)
+                    return "Precisa se alistar!";
+                else if (sexo != 'M' || idade < 18)
+                    return "Nao precisa se alistar!";
+                else
+                    return "Buguei!";
+            }
+
+            console.log(servicoMilitar('M', 18));
+        </script>
+    </body>
+</html>

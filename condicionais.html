@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Condicionais</title>
+    </head>
+    <body>
+        <script>
+            function retornaSexo(sexo) {
+
+                // if (sexo == 'M')
+                //     return 'Masculino';
+                // else if (sexo == "F")
+                //     return 'Feminino';
+                // else
+                //     return 'Outro';
+
+                return sexo == 'M' ? 'Masculino' : 'Feminino';
+            }
+
+            function retornaSexoSwitchCase(sexo) {
+                switch (sexo) {
+                    case 'M': 
+                        return 'Masculino';
+                    case 'F': 
+                        return 'Feminino';
+                    default:
+                        return 'Outro';
+                }
+            }
+
+            result = retornaSexoSwitchCase('J');
+            console.log(result);
+        </script>
+    </body>
+</html>
