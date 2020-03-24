@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Eventos Inline</title>
+    </head>
+    <body>
+        <div id="app">
+            <input id="nome"/>
+        </div>
+        <script>
+            var linkElement = document.createElement('a');
+            
+            linkElement.setAttribute('href', 'http://www.google.com');
+            linkElement.setAttribute('title', 'Google.com');
+
+            var textElement = document.createTextNode('acessar google.com');
+
+            linkElement.appendChild(textElement);
+
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
+
+            //removendo o input que tem no html pelo js
+            var inputElement = document.querySelector('#nome');
+            containerElement.removeChild(inputElement);
+        </script>
+    </body>
+</html>

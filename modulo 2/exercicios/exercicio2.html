@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Eventos Inline</title>
+    </head>
+    <body>
+        <div id="app">
+            <button class="botao" onclick="createBox()">Create box</button>
+            <div class="boxes">
+
+            </div>
+        </div>
+        <script>
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+            
+            function createBox(){
+                var boxElement = document.createElement('div');
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = getRandomColor();
+                boxElement.style.marginTop = 3;
+
+                var containerElement = document.querySelector('.boxes');
+                containerElement.appendChild(boxElement);
+            };
+
+
+        </script>
+    </body>
+</html>

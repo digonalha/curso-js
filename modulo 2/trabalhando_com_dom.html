@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Eventos Inline</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome" id="nome" class="nome"/>
+            <button class="botao">Adicionar</button>            
+        </div>
+        <script>
+            var inputElementId = document.getElementById('nome');
+            var inputElementName = document.getElementsByName('nome');
+            var inputElementsByTag = document.getElementsByTagName('input'); //retorna todas as tags do tipo passado
+            var inputByQuery = document.querySelector('body div#app input'); //estudar!
+                        
+            var inputByQuery = document.querySelector('input[name=nome]'); 
+            var btnElement = document.querySelector('button.botao');
+
+            btnElement.onclick = function(){
+                var text = inputByQuery.value;
+                alert(text + ' está escrito no input!');
+            }
+            // console.log(inputElementId)
+            // console.log(inputElementName)
+            // console.log(inputElementsByTag)
+
+            // console.log(inputByQuery)            
+        </script>
+    </body>
+</html>

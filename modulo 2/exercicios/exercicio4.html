@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Eventos Inline</title>
+    </head>
+    <body>
+        <div id="app">
+            <ul class="list"></ul>
+            <input type="text" name="nome"/>
+            <button class="botao" onclick="adicionar()">Adicionar</button>    
+        </div>
+        <script>
+            //usar sort para ordenar alfabeticamente
+            var nomes = ["Renan", "Thomas", "Rodrigo"];
+            
+            var containerElement = document.querySelector('.list');     
+            var inputByQuery = document.querySelector('input[name=nome]');                 
+
+            for (nome of nomes.sort()){
+                    var listItem = document.createElement('li');
+                    listItem.textContent = nome;
+                    containerElement.appendChild(listItem);
+            }
+
+            function adicionar(){
+                var text = inputByQuery.value;
+                if (text != ''){
+                    if (nomes.indexOf(text) != -1){
+                        alert('O nome preenchido já se encontra na lista!');
+                        return;
+                    }
+                    
+                    nomes.push(text);
+
+                    var listItem = document.createElement('li');
+                    listItem.textContent = inputByQuery.value;
+                    containerElement.appendChild(listItem);
+                    inputByQuery.value = '';
+                }
+                else
+                    alert('Preencha com um nome válido!');
+            }
+        </script>
+    </body>
+</html>

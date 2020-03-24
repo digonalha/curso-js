@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Eventos Inline</title>
+    </head>
+    <body>
+        <div id="app">
+            <ul class="list"></ul>
+        </div>
+        <script>
+            //usar sort para ordenar alfabeticamente
+            var nomes = ["Diego", "Lucas", "Gabriel"];
+            
+            var containerElement = document.querySelector('.list');
+            for (nome of nomes.sort()){
+                var listItem = document.createElement('li');
+                listItem.textContent = nome;
+                containerElement.appendChild(listItem);
+            }
+
+        </script>
+    </body>
+</html>
