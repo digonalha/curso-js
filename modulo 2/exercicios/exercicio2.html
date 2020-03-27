@@ -23,14 +23,16 @@
             function createBox(){
                 var boxElement = document.createElement('div');
                 boxElement.style.width = 100;
-                boxElement.style.height = 100;
-                boxElement.style.backgroundColor = getRandomColor();
-                boxElement.style.marginTop = 3;
+                boxElement.style.height = 100;                
+                boxElement.style.marginTop = 10;
+                boxElement.style.backgroundColor = '#f00';
+                boxElement.onmouseover = function (element) { 
+                    boxElement.style.backgroundColor = getRandomColor();
+                };
 
                 var containerElement = document.querySelector('.boxes');
                 containerElement.appendChild(boxElement);
             };
-
 
         </script>
     </body>
