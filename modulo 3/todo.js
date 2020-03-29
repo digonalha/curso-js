@@ -14,7 +14,19 @@ function listTodos() {
     for (todo of todos){
         var todoElement = document.createElement('li');
 
+        var linkElement = document.createElement('a');
+        var linkText = document.createTextNode('Excluir')
+
+        linkElement.setAttribute('href', '#');
+
+        var pos = todos.indexOf(todo);
+
+        linkElement.setAttribute('onclick', 'removeTodo('+ pos+')');
+
+        linkElement.appendChild(linkText);
+
         todoElement.appendChild(document.createTextNode(todo))
+        todoElement.appendChild(linkElement);
         listElement.appendChild(todoElement);
     }
 }
@@ -26,6 +38,12 @@ function insertTodo() {
     todos.push(todoText);
 
     inputElement.value = '';
+    listTodos();
+}
+
+function removeTodo(pos){
+    todos.splice(pos, 1);
+
     listTodos();
 }
 
