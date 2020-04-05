@@ -1,2 +1,2 @@
 # curso-js
-estudando js
+aprendendo javascript roots
